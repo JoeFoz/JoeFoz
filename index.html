@@ -47,30 +47,34 @@
             color: #777;
         }
 
-        /* Right-hand side links styling */
-        .right-sidebar {
-            margin-top: 20px;
+        /* Bottom navigation bar styling */
+        .bottom-navbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #007bff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
         }
 
-        .right-sidebar a {
-            display: block;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #007bff;
+        .bottom-navbar a {
             color: white;
-            text-align: center;
             text-decoration: none;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .bottom-navbar a:hover {
+            background-color: #0056b3;
             border-radius: 4px;
         }
 
-        .right-sidebar a:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive design: Stack links below content on smaller screens */
+        /* Responsive design adjustments for larger screens */
         @media (min-width: 768px) {
-            .container {
-                margin-right: 180px;
+            .bottom-navbar {
+                display: none;
             }
 
             .right-sidebar {
@@ -78,6 +82,21 @@
                 right: 10px;
                 top: 50px;
                 width: 150px;
+            }
+
+            .right-sidebar a {
+                display: block;
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: #007bff;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 4px;
+            }
+
+            .right-sidebar a:hover {
+                background-color: #0056b3;
             }
         }
     </style>
@@ -97,6 +116,7 @@
         </footer>
     </div>
 
+    <!-- Right-hand side links for large screens -->
     <div class="right-sidebar">
         <a href="#">Example Link 1</a>
         <a href="#">Example Link 2</a>
@@ -104,9 +124,19 @@
         <a href="#">Example Link 4</a>
         <a href="#">Example Link 5</a>
     </div>
+
+    <!-- Bottom navigation bar for mobile screens -->
+    <div class="bottom-navbar">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+    </div>
 </body>
 
 </html>
+
 
 
 
