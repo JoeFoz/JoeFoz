@@ -5,18 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
-    <!-- Link to Google Fonts for custom font styling -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Simple CSS styling for the page -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #f5f5f5;
             text-align: center;
             color: #333;
@@ -24,6 +18,7 @@
 
         .container {
             max-width: 600px;
+            margin: 20px auto;
             padding: 20px;
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -54,10 +49,7 @@
 
         /* Right-hand side links styling */
         .right-sidebar {
-            position: fixed;
-            right: 10px;
-            top: 50px;
-            width: 130px;
+            margin-top: 20px;
         }
 
         .right-sidebar a {
@@ -74,6 +66,20 @@
         .right-sidebar a:hover {
             background-color: #0056b3;
         }
+
+        /* Responsive design: Stack links below content on smaller screens */
+        @media (min-width: 768px) {
+            .container {
+                margin-right: 180px;
+            }
+
+            .right-sidebar {
+                position: fixed;
+                right: 10px;
+                top: 50px;
+                width: 150px;
+            }
+        }
     </style>
 </head>
 
@@ -82,7 +88,6 @@
         <h1>Welcome to My Home Page</h1>
         <p>I am busy right now building some APIs, so check back soon!</p>
 
-        <!-- Graphics Section with a reliable SVG image -->
         <div class="graphics">
             <img src="assets/images/luca-bravo-XJXWbfSo2f0-unsplash.jpg" alt="Coding Illustration">
         </div>
@@ -92,7 +97,6 @@
         </footer>
     </div>
 
-    <!-- Right-hand side links -->
     <div class="right-sidebar">
         <a href="#">Example Link 1</a>
         <a href="#">Example Link 2</a>
@@ -103,5 +107,6 @@
 </body>
 
 </html>
+
 
 
